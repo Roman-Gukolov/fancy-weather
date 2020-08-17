@@ -1,0 +1,9 @@
+<div>
+<div class="map">
+  <div class="match-parent" id="map"></div>
+</div>
+<div class="lat-lng" *ngIf="ipInfo">
+  <p>{{ getLatitudeText() }}: {{ getLatTrunc() }}&#xb0;{{ getLatDecimal() }}&apos;</p>
+  <p>{{ getLongitudeText() }}: {{ getLonTrunc() }}&#xb0;{{ getLonDecimal() }}&apos;</p>
+</div>
+</div>

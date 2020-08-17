@@ -1,0 +1,48 @@
+<div class="buttons">
+  <div class="left-block">
+    <button class="update-button">
+      <div class="spinner"
+           id="spinner"
+           (click)="rotate()"
+           [@rotatedState]="state">
+      </div>
+    </button>
+
+    <div class="lang-menu">
+      <button class="drop-down-menu-button" (click)="showLangs()" id="langBtn">
+        <span>{{lang}}</span>
+        <div class="arrow-down" id="arrowDown"></div>
+      </button>
+
+      <div class="drop-down-menu" id="langMenu">
+        <button class="menu-item" id="enBtn" (click)="selectLang('en')" [disabled]="lang == 'en'">en</button>
+        <button class="menu-item" id="ruBtn" (click)="selectLang('ru')" [disabled]="lang == 'ru'">ru</button>
+        <button class="menu-item" id="beBtn" (click)="selectLang('be')" [disabled]="lang == 'be'">be</button>
+      </div>
+    </div>
+
+    <button class="button-f" id="buttonF"
+            [disabled]="!degreesCelsius"
+            (click)="changeDegrees()">&#8457;</button>
+    <button class="button-c active" id="buttonC"
+            [disabled]="degreesCelsius"
+            (click)="changeDegrees()">&#8451;</button>
+  </div>
+
+  <div class="right-block">
+    <input
+      id="search"
+      name="search"
+      class="search-input"
+      type="search"
+      [(ngModel)]="inputCity"
+      (keyup.enter)="searchCity()"
+      required
+      placeholder="{{ getSearchInputPlaceholder() }}"
+    />
+
+    <button (click)="searchCity()" class="search-button">
+      {{ getSearchButtonText() }}
+    </button>
+  </div>
+</div>
