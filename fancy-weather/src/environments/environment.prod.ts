@@ -8,7 +8,7 @@ export const environment = {
     token: '5d75dc6ae7fce7',
   },
   opencagedata: {
-    key: '9ff398bbd6f64dbfa455667408c6332d',
+    key: 'bec5be22e48e4dd7ad1836732f698e01',
   },
   openweathermap: {
     key: 'd401561bcf03fdd5775e455a7100fa4f',
