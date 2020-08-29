@@ -1,0 +1,7 @@
+<app-control (searchEvent)="search($event)" (updateUnitsAndLang)="updateForecastAndLocation()">
+</app-control>
+
+<div class="main-content">
+  <app-weather></app-weather>
+  <app-location (locationEvent)="onMapInit($event)" class="map-block"></app-location>
+</div>

@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../assets/fonts/Montserrat/Montserrat-Bold.ttf);
+  src: local("Montserrat"), local("Montserrat-Regular"),
+    url(../assets/fonts/Montserrat/Montserrat-Regular.ttf) format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Motrserrat, Helvetica, sans-serif;
+  background: linear-gradient(
+        180deg,
+        rgba(8, 15, 26, 0.59),
+        rgba(17, 17, 46, 0.46)
+      )
+      50% fixed,
+    url(../assets/icons/bg-default.jpg) no-repeat 50% fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  min-width: 320px;
+}
+
+.mapboxgl-ctrl-bottom-left {
+  display: none;
+}
+
+.mapboxgl-ctrl-bottom-right {
+  display: none;
+}
+
+.mapboxgl-canvas, .mapboxgl-canvas-container.mapboxgl-interactive.mapboxgl-touch-drag-pan.mapboxgl-touch-zoom-rotate {
+  border-radius: 25px;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%, 105% 100%, 86% 85%, 0% 85%);
+}
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.map-block {
+  margin-right: 6vw;
+  margin-left: auto;
+}
+
+@media (max-width: 1350px) {
+  .main-content {
+    justify-content: center;
+  }
+  .map-block {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 590px) {
+  .map-block {
+    margin-left: 6vw;
+  }
+}
